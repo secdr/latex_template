@@ -1,0 +1,504 @@
+\documentclass{article}
+\usepackage{a4wide}
+\title{Response to the Reviewer's Comments}
+\author{Johan van Benthem \and Jan van Eijck \and Barteld Kooi}
+\begin{document}
+
+\maketitle
+
+The comments of the reviewers have been very useful, for they
+made us aware that some major points we were trying to convey
+remained obscure even to well-informed readers. Following up
+on the reviewers' suggestions, we have restructured the paper
+by changing the order of some sections, by putting more emphasis
+on motivation, and by adding clarifications at crucial spots.
+
+In addition, we have also corrected all factual errors and
+minor infelicities of presentation that the reviewers brought
+to our attention. Below we indicate for each individual comment
+how we have dealt with it.
+
+\begin{verbatim}
+
+>> REFEREE REPORT 1<<
+
+> Review of "Logics of Communication and Change"
+> by van Benthem, van Eijck, Kooi
+>
+> This paper studies dynamic-epistemic logics for reasoning about the
+> exchange of factual and higher-order information.  More precisely,
+> the paper examines the extension of two existing logics with common
+> knowledge, obtaining PAL-RC (a logic of public announcements) and LCC
+> (a logic for general update actions). The driving goal is to obtain
+> "reduction axioms" for common knowledge, which lead to a uniform
+> proof technique for completeness and complexity analysis.
+>
+> My overall reaction to the paper is ambivalent. On the one hand, I am
+> familiar with (some of) the work of the authors, and highly respect
+> it. And this paper follows in the tradition of being a solid
+> technical paper about dynamic-epistemic logics. On that account, I am
+> leaning towards accepting the paper. On the other hand, the overall
+> motivation and structure of the paper leaves a lot to be desired. My
+> recommendation, therefore, is for the authors to revise the paper to
+> clarify the contribution and the aim of the paper, prior to it being
+> accepted. I do not have any comments on the technical aspects of the
+> work. The parts that I checked work out, and the parts that I did not
+> check carefully feel right. The comments that follow I hope will help
+> the authors understand where I have gotten confused; if I did get
+> confused, knowing the subject, I expect average reader might get lost.
+\end{verbatim} 
+
+We take the point, and we think our new version is much clearer.
+
+\begin{verbatim}
+> I have read the paper a few times now, and I am still a bit at a loss
+> trying to describe the overall story. The main contribution seems to
+> be a technical contribution in a fairly narrow sense (and the
+> introduction agrees with my assessment): consider dynamic-epistemic
+> logics with common knowledge, and look at their completeness proofs.
+> These already exist (as the authors are well aware). However, their
+> proofs are ugly. Well, not really. But they do not follow the elegant
+> approach of using reduction axioms to translate common
+> knowledge down to other operators - isn't that sad? Wonder if we can
+> somehow extend the languages to restore a form of reduction axioms
+> and thereby get more uniform completeness proofs? The authors answer
+> is: yes, at least, in the case we have examined: PAL, and E-PDL.
+>
+> The obvious question at this point is: why? Completeness proofs for
+> PAL + common knowledge seem to already exist, so it is already known
+> that PAL + common knowledge is powerful enough to capture
+> proof-theoretically all the valid properties of models. So there is
+> no need to extend the language with a new operator to obtain
+> completeness. The new operator is only needed to make the proofs
+> nicer. That seems like a somewhat weak motivation. The authors seem
+> to at least partially agree, as they point out that logics with model
+> updates (which is the kind of operator that is added to the logic)
+> are of independent interest, and that seems to justify the
+> exploration of the extended PAL logic in the core of section 2. This
+> muddles the story: a big part of section 2 has nothing to do with
+> reduction axioms, the main argument put forth in the introduction. It
+> is distracting. Please do not misunderstand me: it is technically
+> interesting, and there are real results here. But that distract from
+> the storyline nevertheless. Either move the results somewhere else,
+> or change the story. (I would advocate the latter...)
+\end{verbatim}
+
+We read the objection of the reviewer as a complaint about the
+story line. Our restructuring should have remedied this.
+
+We now emphasize the real reason why we want the reduction axioms:
+as a tool for {\em compositional analysis} of the epistemic effects of
+many different types of information-carrying event. It is actually
+surprising that this is possible. We see this compositional analysis
+as the heart of dynamic epistemic logic, not just a negotiable
+'luxury' for some cases. As a side-effect, such axioms
+'reduce' a complete dynamic epistemic language to its static
+epistemic base -- but this is a consequence of the analysis,
+not the main motivation. Of course, as we now also stress, this
+reduction does have another interesting interpretation by itself:
+the static language must be rich enough to 'pre-encode' the
+effects of the relevenat class of informational events. This
+is a requirement on optimal language design which is also known
+from other areas of logic, such as conditional logic vis-a-vis
+belief revision. Finally, and we may have given the wrong
+impression that *this* was our main point: the reduction
+analysis tends to make for simpler completeness proofs,
+and some direct borrowing of known properties of the
+static base into the full dynamic system.
+
+What we also find interesting is how this methodology puts us on
+the track of new epistemic operators that have not been isolated
+as important before, even though they were there just below the
+surface. In particular, relativized common knowledge seems a
+new notion of independent interest.
+
+\begin{verbatim}
+> Section 3 seems to be there to motivate the logic introduced in the
+> following section. A bit odd to place it there - it really feels like
+> this ought to be in the introduction. However, of course, this cannot
+> be done, because there is the intervening section 2, which describes
+> the "pilot case" of the real work that will be done in section 4.
+> Again, section 2 does not seem to fit where it is.
+>
+\end{verbatim}
+
+We have swapped Sections 2 and 3, with the intent of improving the
+story line.
+
+\begin{verbatim}
+> Section 4 is the core of the paper. (And, I guess this is what the
+> title of the paper refers to.) And here again, the story gets
+> slightly muddled. At this point in reading the paper, one stills
+> hangs on to the thread that the authors want to derive reduction
+> axioms for common knowledge in various dynamic-epistemic logics.
+\end{verbatim} 
+
+But see the above.
+
+\begin{verbatim} 
+> And to do so, they now look at Epistemic PDL, which is of course just PDL
+> where the programs are interpreted as syntactic description of the
+> epistemic reachability relations. It is well-known that the standard
+> axioms for PDL are complete for the standard interpretation, and here
+> as well, the motivation for having reduction axioms seems to be to
+> make the proofs easier. But this is not described at all. Instead of
+> following up on this storyline, the authors switch gear and say:
+> look, we want to be able to reason about changes (see example in the
+> last section),
+> and this calls for a more powerful logic. Well, no, not really, as it
+> turns out, as the expressive power of LCC is the same as PDL (Theorem
+> 12). So what is the point of LCC? To make the completeness proof
+> easier, as the introduction seems to indicate? I would argue that the
+> proof of completeness of PDL is not that complicated. But I agree
+> that it does not follow directly from reduction axioms. Although,
+> arguably, the derivation of the reduction axioms in this paper seem
+> to be at an equivalent level of complexity. But the authors *seem* to
+> have a further motivation to introduce LCC, but it is not spelled out
+> clearly what that motivation is -- although I do believe there is one.
+\end{verbatim} 
+
+The referee is right: the completeness proof of PDL is not that
+complicated. More than that: it is very elegant, and we have nothing
+to add to it.
+
+The new presentation makes our intentions clearer, we think.
+The completeness proof of the logic of epistemic action models as
+provided by Baltag, Moss and Solecki is complicated. Our method of
+reduction axioms allows us to `lift' the elegant PDL completeness
+proof to the logic of epistemic action models. And again: the
+reduction axioms that we find are interesting in their own right
+as we are after compositional analysis of epistemic effects of events
+observed in groups of agents, and earlier dynamic epistemic logic were
+simply unable to provide that methodology for common knowledge.
+
+The `point' of LCC is to show that `really' epistemic PDL, contrary to
+what the designs of intricate logics of communication and knowledge
+suggest, is all that is needed for a rich logic of communication and
+change. So if anything, this is a new vindication of PDL, rather than
+a criticism of it.
+
+It has to be said, though, that we do not provide a knock-down argument
+why this full system is {\em needed} for our style of analysis. We have
+not been able to find anything weaker that works, but our list of
+open questions at the end does ask if other weaker 'solutions' exist.
+
+\begin{verbatim} 
+> Thus, after having read the paper a few times, I am left with an
+> appreciation of a number of technical results that seem to be
+> connected, but no clear idea exactly why those results are worth
+> pursuing, and what the connections are exactly. I therefore strongly
+> encourage the authors to focus the story and turn what seems like a
+> number of forking meandering paths into a clear trail.
+\end{verbatim}
+
+We hope that our new version is much more focussed.
+
+The author is right on one further point. We have chosen to add
+events that change the world to the standard DEL-framework, since
+we feel that this increases the scope with little effort, while
+still operating with the same methodology. But it is clear that
+this is orthogonal to our main points. We have considered taking
+it out (but that seemed a pity), or to put it into a separate
+section: but that would lead to too much duplication. Our solution
+now is to leave the story combined, while pointing out to the reader
+who so prefers that a 'change-free' reading of our main notions and
+results can be obtained by merely omitting all our technical talk
+about substitutions.
+
+\begin{verbatim}
+> As far as style is concerned, the work "perspicuous" appears three
+> times on the first page; once in the abstract, and twice in the
+> second paragraph. While perspicuous is a delicious word, it is rare
+> enough that seeing it three times makes one frown.
+\end{verbatim} 
+
+We have rephrased things using a wider repertoire of adjectives.
+
+\begin{verbatim}
+> Also, typo on p.3,
+> first paragraph of 2.1: "PLaza" instead of "Plaza".
+\end{verbatim}
+
+Corrected.
+
+\begin{verbatim} 
+>>REFEREE REPORT 2<<
+
+> List of typos, corrections and comments:
+>
+> 1. One of the key definitions ...
+\end{verbatim}
+
+The referee is correct that this definition was wrong.
+
+The following change solves the problem. We now take the transitive
+closure rather than the *reflexive* transitive closure in the
+definition. We have adapted the rest of the text including the
+axioms accordingly, and now also the remark on page 5 is correct.
+
+\begin{verbatim}
+> 2. The above correction ...
+\end{verbatim}
+
+We have considered the suggestion of the referee to write $C(\psi|\phi)$
+rather than $C(\phi,\psi)$, but found eventually that formulas become
+less readable when they also contain $[\phi]$ operators.
+
+However, we did take up the referee's suggestion to provide a
+brief way of reading formulas with relativized common knowledge.
+
+\begin{verbatim}
+> 3. The two axioms called Dist (distribution) on page 5 are usually called
+>    K.
+\end{verbatim} 
+
+This is indeed correct. We chose to give a more informative name
+to these axioms for our purposes here. We added a remark to establish
+the connection with standard terminology.
+
+\begin{verbatim}
+> 4. A typo
+\end{verbatim}
+
+Corrected.
+
+\begin{verbatim}
+> 5. In Def 6 (``closure'')
+\end{verbatim}
+
+We followed the referee's advice and added a remark.
+
+\begin{verbatim}
+> 6. Theorems 2 and 3 (in section 2.5) are not proved.
+\end{verbatim}
+
+We have added a remark on the well-definedness of the translation in
+definition 9 by saying that a complexity measure that the referee
+suggests can be given and that the induction can follow this measure.
+We also briefly discuss the somewhat tangential role of the final
+axiom for two consecutive epistemic actions.
+
+\begin{verbatim}
+> 7. The proof of Theorem 4 refers to Lemma 2 ...
+\end{verbatim}
+
+We have removed the reference to Lemma 2 and now state in the proof
+what we intended to get from Lemma 2.
+
+\begin{verbatim}
+> 8. In the formulation of the EL-RC Game ...
+\end{verbatim}
+
+The referee is correct to point out the ambiguity. We have resolved
+it by renaming 'n' to 'k'.
+
+\begin{verbatim}
+> 9. In defining the third kind of moves ...
+\end{verbatim}
+
+We have added a clarifying remark on complements.
+
+\begin{verbatim}
+> 10. No intuition for ``epistemic PDL'' (Section 4.2, Definition 21) is
+>     provided.
+\end{verbatim} 
+
+We have added references and clarification. 
+
+\begin{verbatim}
+> 11. On page 31.
+\end{verbatim}
+
+We have corrected the text in accordance with the referee's comments.
+
+\begin{verbatim}
+>> REFEREE REPORT 3<<
+
+> Comments:
+
+> first bullet
+\end{verbatim} 
+
+Indeed, the proof of Lemma 1 was very terse.
+We added more details to the proof.
+
+\begin{verbatim} 
+> second bullet
+\end{verbatim}
+
+The reason we look at EL-RC, is that it seems to be the poorest
+logic (in terms of expressivity) for which reduction of common
+knowledge can be achieved. In the paper it also has a didactical
+purpose, since EL-RC is rather simple compared to full epistemic
+PDL, making for a nice explanation of the key idea of language
+extension by relativization, which may be harder to discern behind the
+technicalities of our program transformers in Section 4.
+
+\begin{verbatim}
+> third bullet
+\end{verbatim}
+
+We have moved this section to anothe rplace, right after the introduction.
+
+\begin{verbatim}
+> fourth bullet
+\end{verbatim}
+
+We have replaced references to manuscripts with references
+to published reports, and in once case to a URL for download.
+
+\begin{verbatim}
+> fifth bullet
+\end{verbatim}
+
+A reference to Heikki Tuomine's ECAI 88 paper has been added.
+Indeed an interesting link that we were not aware of!
+
+\begin{verbatim}
+> Some corrections
+> p.1, middle: Explain briefly the meaning of the [phi] operator here.
+\end{verbatim}
+
+We indicate how to read the formula now, including the [phi] operator.
+
+\begin{verbatim}
+> second bullet: The languages are assumed ...
+\end{verbatim}
+
+We assume throughout that the number of basic propositions and the
+number of agents are finite, because it makes the model theoretic
+points easier to make. We are not sure that allowing an infinite
+number of proposition letters would affect expressivity. After all,
+the number of agents and basic propositions mentioned in a single
+formula will remain finite in any case, given the way we have set up
+the languages. But we do use a logical finiteness lemma at some stage,
+whose proof does depend on having only a finite stock of proposition
+letters. Of course, working with finite update models is essential
+to our reduction axioms, because otherwise, we would encounter  infinite
+conjunctions and disjunctions in listing indistinguishable events.
+
+
+\begin{verbatim}
+> p.5, Remark: `...dynamic...':
+\end{verbatim}
+
+Corrected
+
+\begin{verbatim}
+> p.6, line 8
+\end{verbatim}
+
+We added further details to the proof.
+
+\begin{verbatim}
+> First paragraph of section 2.5: edit the sentence `Note that this holds
+> ...'
+\end{verbatim}
+
+The sentence has been replaced by a hopefully less obscure one.
+
+\begin{verbatim}
+> p.8, the [phi] move
+\end{verbatim}
+
+Corrected
+
+\begin{verbatim}
+> p.9, Def 12 R: redundant pair of parentheses.
+\end{verbatim}
+
+Corrected
+
+\begin{verbatim}
+> p.9, line -9: what does it mean ...
+\end{verbatim}
+
+Corrected
+
+\begin{verbatim}
+> p.10, line -8: remove a ( and reverse the arrow in this definition.
+\end{verbatim}
+
+Corrected
+
+\begin{verbatim}
+> p.11-12, Def. 14, 15
+\end{verbatim}
+Corrected
+
+\begin{verbatim}
+> p.11, Lemma 4
+\end{verbatim}
+
+Corrected as min(x,y)-n
+
+\begin{verbatim}
+> p.12, Def. 15
+\end{verbatim}
+
+The definition should read `0 <n <= m', since we do not want any of the
+lines to be empty. We now have different notation for the different models.
+
+\begin{verbatim}
+> p.13, Lemma 6
+\end{verbatim}
+
+The textbooks we consulted usually leave this as an exercise. To save
+space we also do not give the proof, but now we do refer to some
+precise page numbers.
+
+\begin{verbatim}
+> p.18 Def.18
+\end{verbatim}
+
+Reconciled. We now only refer to update models.
+
+\begin{verbatim} 
+> p.21 proof of Thm 9
+\end{verbatim}
+
+We replaced R with B.
+
+\begin{verbatim} 
+> p. 26, Def. 27
+\end{verbatim}
+
+A reminder now preceeds the definition.
+
+\begin{verbatim} 
+> p. 27, line -8
+\end{verbatim}
+
+We now say that the simple cases reduce to EL-RC.
+
+\begin{verbatim} 
+> p. 31, second last bulet: can you support `...we have a proof that...'
+> with a reference?
+\end{verbatim}
+
+Our manuscript ``A fixed-point look at update logic'' is the reference. It
+is only available so far as a downloadable document, whose URL is provided.
+
+\begin{verbatim} 
+> p. 31, line -2
+\end{verbatim}
+
+We have corrected the mistake.
+
+\begin{verbatim} 
+> p. 32, line 3 any reference here?
+\end{verbatim}
+
+A reference has been added.
+
+\begin{verbatim} 
+> p. 32, middle: I do not understand the sentence `In the setting of
+> ... '. Edit, please.
+\end{verbatim}
+
+Edited
+
+\end{document}
+
+
+
