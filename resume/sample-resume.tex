@@ -1,0 +1,67 @@
+% Some people asked the LaTeX template for http://pluskid.org/assets/chiyuan-resume.pdf
+% So I put a sample here. Feel free to use / modify it. Note you need to use xelatex to
+% compile it and change the fonts to the ones you prefer and have on your system.
+\documentclass[11pt]{article}
+\usepackage{color}
+\definecolor{ColorURL}{rgb}{0.1,0.12,0.45}
+\usepackage[colorlinks=true,urlcolor=ColorURL]{hyperref}
+\usepackage{fontspec,xunicode,xltxtra}
+\usepackage[left=.8in,right=.8in,top=.9in,bottom=.7in]{geometry}
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage{array}
+
+\setmainfont{Linux Libertine O}
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O}
+
+\textheight=9.5in
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\newlength{\tableheadsize}
+\newlength{\tabletailsize}
+\begin{document}
+
+\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+\textsf{\huge Sherlock Holmes}  & \\
+221B Baker Street &\href {mailto:holmes@gmail.com}{holmes@gmail.com} \\
+London, NW1 6XE & \href{http://en.wikipedia.org}{http://en.wikipedia.org}
+\end{tabular*}
+
+\vspace{0.2in} {\Large \textsf{Education}}
+\vspace{-0.0cm}\rule[0.2cm]{\linewidth}{0.55mm}
+
+\begin{tabular*}{\textwidth}{>{\bf}p{6em}l}
+2015-\phantom{2020} & PhD Student in House of Gryffindor, Hogwarts \\
+          & School of Witchcraft and Wizardry
+          \hfill\textsc{\scriptsize Advisor}: Armando Dippet \\
+2015-2015 & Summer Internship  \\
+          & Ministry of Magic \\
+          & Office for the Detection and Confiscation of Counterfeit Defensive Spells and Protective Objects
+\end{tabular*}
+
+\vspace{0.2in} {\Large \textsf{Publications}}
+\vspace{-0.0cm}\rule[0.2cm]{\linewidth}{0.55mm}
+
+\setlength{\tableheadsize}{1.5em}
+\setlength{\tabletailsize}{\linewidth}
+\addtolength{\tabletailsize}{-\tableheadsize}
+\begin{tabular*}{\linewidth}{p{\tableheadsize}p{\tabletailsize}}
+\guillemotright & \textbf{Sherlock Holmes}, John H. Watson: \emph{On Deathly Hallows}.
+    Technical Report, 2015. \\
+\end{tabular*}
+
+\vspace{0.2in} {\Large \textsf{Skills}}
+\vspace{-0.0cm}\rule[0.2cm]{\linewidth}{0.55mm}
+
+\setlength{\tableheadsize}{7em}
+\setlength{\tabletailsize}{\linewidth}
+\addtolength{\tabletailsize}{-\tableheadsize}
+\begin{tabular*}{\linewidth}{>{\bf}p{\tableheadsize}p{\tabletailsize}}
+Programming & C, C++, Java, Ruby, Python, R, Matlab. \\
+Language    & English (native), Parseltongue.
+\end{tabular*}
+
+\end{document}
