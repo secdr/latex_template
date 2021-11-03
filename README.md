@@ -8,16 +8,16 @@ some useful latex template for writing and submiting.
 + response: response letter template;
 
 
-    ├─cover-letter
-    ├─job-template
-    │  └─resume
-    ├─paper-template
-    │  ├─CCS
-    │  ├─elsevier
-    │  │  └─doc
-    │  ├─IEEEtran2
-    │  └─oakland
-    └─response-letter
-        ├─tempalte-latex-1
-        ├─template-latex-2
-        └─template-word-1
+        ├─cover-letter
+        ├─job-template
+        │  └─resume
+        ├─paper-template
+        │  ├─CCS
+        │  ├─elsevier
+        │  │  └─doc
+        │  ├─IEEEtran2
+        │  └─oakland
+        └─response-letter
+            ├─tempalte-latex-1
+            ├─template-latex-2
+            └─template-word-1
